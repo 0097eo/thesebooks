@@ -4,6 +4,7 @@ import Home from "./Home";
 import CollectionOfCards from "./CollectionOfCards";
 import NewBook from "./NewBook";
 import BookDetails from "./BooksDetails";
+import NavBar from "./NavBar";
 
 function App() {
   return (
