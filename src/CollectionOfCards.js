@@ -25,4 +25,7 @@ const CollectionOfCards = () => {
 
   const handleCardClick = (bookId) => {
     console.log(`Clicked on book with ID: ${bookId}`);
-  };}
+  };
+
+  const handleDelete = (bookId) => {}
+}
