@@ -2,6 +2,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import CollectionOfCards from "./CollectionOfCards";
+import NewBook from "./NewBook";
 
 function App() {
   return (
