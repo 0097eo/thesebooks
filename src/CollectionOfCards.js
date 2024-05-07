@@ -21,4 +21,8 @@ const CollectionOfCards = () => {
         console.error(error);
         setIsLoading(false);
       });
-  }, []);}
+  }, []);
+
+  const handleCardClick = (bookId) => {
+    console.log(`Clicked on book with ID: ${bookId}`);
+  };}
