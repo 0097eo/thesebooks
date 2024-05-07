@@ -37,7 +37,7 @@ const BookDetails = () => {
         <div>
           <h2>Title : {book.title}</h2>
           <p>Author : {book.author}</p>
-          <p>Description: {book.description}</p>
+          <p>Description : {book.description}</p>
           <p>Image :  {book.image}</p>
           <p>DetailedDescription : {book.detailedDescription}</p>
         
