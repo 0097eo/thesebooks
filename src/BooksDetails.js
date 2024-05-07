@@ -5,9 +5,8 @@ const BookDetails = () => {
   const { bookId } = useParams();
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
-
-  
-
+  const [showThankYou, setShowThankYou] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const fetchBookData = async () => {
@@ -21,26 +20,39 @@ const BookDetails = () => {
         setLoading(false);
       } catch (error) {
         console.error('Error fetching book data:', error);
-        setLoading(true);
+        setLoading(false);
       }
     };
 
-   
     fetchBookData();
   }, [bookId]);
 
+  const toggleThankYou = () => {
+    setShowThankYou(!showThankYou);
+  };
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
-    <div>
+    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
       {loading ? (
         <p>Loading...</p>
       ) : book ? (
         <div>
-          <h2>Title : {book.title}</h2>
-          <p>Author : {book.author}</p>
-          <p>Description : {book.description}</p>
-          <p>Image :  {book.image}</p>
-          <p>DetailedDescription : {book.detailedDescription}</p>
-        
+          <h2>Title: {book.title}</h2>
+          <p>Author: {book.author}</p>
+          <p>Description: {book.description}</p>
+          {book.image && <img src={book.image} alt={book.title} />}
+          <p>Detailed Description: {book.detailedDescription}</p>
+          <button onClick={toggleThankYou}>
+            {showThankYou ? 'Thank You' : 'Click to Show Thank You'}
+          </button>
+          {showThankYou && <p>Thank You</p>}
+          <button onClick={toggleDarkMode}>
+            {darkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
         </div>
       ) : (
         <p>No book data available</p>
