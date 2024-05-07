@@ -27,5 +27,17 @@ const CollectionOfCards = () => {
     console.log(`Clicked on book with ID: ${bookId}`);
   };
 
-  const handleDelete = (bookId) => {}
-}
+  const handleDelete = (bookId) => {
+    fetch(`https://booksdata.onrender.com/books/${bookId}`, {
+      method: 'DELETE',
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to delete book');
+      }
+      setBooks(books.filter(book => book.id !== bookId));
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  };}
