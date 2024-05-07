@@ -8,7 +8,7 @@ const BookDetails = () => {
 
   
 
-  
+
   useEffect(() => {
     const fetchBookData = async () => {
       try {
@@ -25,6 +25,7 @@ const BookDetails = () => {
       }
     };
 
+   
     fetchBookData();
   }, [bookId]);
 
