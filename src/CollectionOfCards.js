@@ -40,4 +40,29 @@ const CollectionOfCards = () => {
     .catch(error => {
       console.error(error);
     });
-  };}
+  };
+
+  return (
+    <div>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : books.length === 0 ? (
+        <p>No books found.</p>
+      ) : (
+        <div className="card-container">
+          {books.map(book => (
+            <Card
+              key={book.id}
+              title={book.title}
+              content={book.description}
+              onClick={() => handleCardClick(book.id)}
+              onDelete={() => handleDelete(book.id)}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default CollectionOfCards;
