@@ -23,10 +23,6 @@ const CollectionOfCards = () => {
       });
   }, []);
 
-  const handleCardClick = (bookId) => {
-    console.log(`Clicked on book with ID: ${bookId}`);
-  };
-
   const handleDelete = (bookId) => {
     fetch(`https://booksdata.onrender.com/books/${bookId}`, {
       method: 'DELETE',
@@ -51,11 +47,7 @@ const CollectionOfCards = () => {
       ) : (
         <div className="card-container">
           {books.map(book => (
-            <Card key={book.id} title={book.title}
-   
-              onClick={() => handleCardClick(book.id)}
-              onDelete={() => handleDelete(book.id)}
-            />
+            <Card key={book.id} books={books} onDelete={() => handleDelete(book.id)}/>
           ))}
         </div>
       )}
