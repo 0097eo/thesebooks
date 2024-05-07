@@ -1,62 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const BookDetails = () => {
-  const { bookId } = useParams();
   const [book, setBook] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [showThankYou, setShowThankYou] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const { id } = useParams();
 
   useEffect(() => {
-    const fetchBookData = async () => {
+    const fetchBookDetails = async () => {
       try {
-        const response = await fetch(`http://booksdata.onrender.com/books/${bookId}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
+        const response = await fetch(`https://booksdata.onrender.com/books/${id}`);
         const data = await response.json();
         setBook(data);
-        setLoading(false);
       } catch (error) {
-        console.error('Error fetching book data:', error);
-        setLoading(false);
+        console.error('Error fetching book details:', error);
       }
     };
 
-    fetchBookData();
-  }, [bookId]);
+    fetchBookDetails();
+  }, [id]);
 
-  const toggleThankYou = () => {
-    setShowThankYou(!showThankYou);
-  };
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  if (!book) return <div>Loading...</div>;
 
   return (
-    <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      {loading ? (
-        <p>Loading...</p>
-      ) : book ? (
-        <div>
-          <h2>Title: {book.title}</h2>
-          <p>Author: {book.author}</p>
-          <p>Description: {book.description}</p>
-          {book.image && <img src={book.image} alt={book.title} />}
-          <p>Detailed Description: {book.detailedDescription}</p>
-          <button onClick={toggleThankYou}>
-            {showThankYou ? 'Thank You' : 'Click to Show Thank You'}
-          </button>
-          {showThankYou && <p>Thank You</p>}
-          <button onClick={toggleDarkMode}>
-            {darkMode ? 'Light Mode' : 'Dark Mode'}
-          </button>
-        </div>
-      ) : (
-        <p>No book data available</p>
-      )}
+    <div>
+      <h1>Title: {book.title}</h1>
+      <img src={book.image} alt={book.title} />
+      <h3>Author: {book.author}</h3>
+      <p>Description: {book.description}</p>
+      <p>Synopsis: {book.detailedDescription}</p>
     </div>
   );
 };

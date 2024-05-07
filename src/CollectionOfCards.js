@@ -51,10 +51,8 @@ const CollectionOfCards = () => {
       ) : (
         <div className="card-container">
           {books.map(book => (
-            <Card
-              key={book.id}
-              title={book.title}
-              content={book.description}
+            <Card key={book.id} title={book.title}
+   
               onClick={() => handleCardClick(book.id)}
               onDelete={() => handleDelete(book.id)}
             />
