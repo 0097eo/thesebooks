@@ -9,6 +9,8 @@ import NavBar from "./NavBar";
 function App() {
   return (
     <div className="App">
+      <NavBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<CollectionOfCards />} />
