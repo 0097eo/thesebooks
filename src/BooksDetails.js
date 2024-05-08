@@ -5,8 +5,8 @@ import './BookDetails.css';
 const BookDetails = () => {
   const [book, setBook] = useState(null);
   const [rating, setRating] = useState('');
-  const [showForm, setShowForm] = useState(false); // State for form visibility
-  const [buttonText, setButtonText] = useState('Rate this book'); // State for button text
+  const [showForm, setShowForm] = useState(false); 
+  const [buttonText, setButtonText] = useState('Rate this book'); 
   const { id } = useParams();
 
   useEffect(() => {
@@ -49,9 +49,9 @@ const BookDetails = () => {
   const toggleFormVisibility = () => {
     setShowForm(!showForm);
     if (showForm) {
-      setButtonText('Rate this book'); // Reset button text when hiding the form
+      setButtonText('Rate this book'); 
     } else {
-      setButtonText('Close Rating'); // Change button text when showing the form
+      setButtonText('Close Rating'); 
     }
   };
 
@@ -61,6 +61,7 @@ const BookDetails = () => {
     <div className="book-details-container">
       <div className="image-container">
         <img src={book.image} alt={book.title} />
+        <a href={book.link} target="_blank" rel="noopener noreferrer">Read Book</a>
       </div>
       <div className="details-container">
         <h1>Title: {book.title}</h1>
