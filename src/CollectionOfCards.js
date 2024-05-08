@@ -3,6 +3,7 @@ import Card from './Card';
 import NewBook from './NewBook';
 import Search from './Search';
 import './Collection.css';
+import AuthDetails from './AuthDetails';
 
 
 function CollectionOfCards() {
@@ -45,6 +46,7 @@ function CollectionOfCards() {
  
     return (
       <div className="container">
+        <AuthDetails />
         <Search filter={filter} setFilter={setFilter} /> 
         <button className="random-btn" onClick={toggleNewBookForm}>{showNewBookForm? 'Add Book' : 'Collapse Form'}</button>
         {!showNewBookForm && <NewBook books={books} setBooks={setBooks} />}

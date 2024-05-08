@@ -5,6 +5,8 @@ import CollectionOfCards from "./CollectionOfCards";
 import NewBook from "./NewBook";
 import BookDetails from "./BooksDetails";
 import NavBar from "./NavBar";
+import Login from "./Login";
+import SignUp from "./Signup";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/books" element={<CollectionOfCards />} />
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/newbook" element={<NewBook />} />

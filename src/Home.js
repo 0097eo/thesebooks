@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from'react-router-dom';
 import './Home.css'
 
 
@@ -7,6 +8,7 @@ const Home = () => {
     <div className="landing-page">
       <header className="header">
         <h3>Welcome to our literary haven, a sanctuary where the world of books awaits you. </h3>
+        <Link to={"/login"}><button className='login-btnn'>Login/Signup</button></Link>
         <h1>Featured books</h1>
       </header>
       <section className="featured-books">

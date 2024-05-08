@@ -41,3 +41,12 @@
     text-align: center;
   }
   
+.login-btnn{
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+}
+
+.login-btnn:hover{
+  transform: scale(1.2);
+}
