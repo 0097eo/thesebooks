@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Card from './Card';
 import NewBook from './NewBook';
 import Search from './Search';
+import './Collection.css';
 
 
 function CollectionOfCards() {
