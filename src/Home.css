@@ -50,3 +50,7 @@
 .login-btnn:hover{
   transform: scale(1.2);
 }
+
+footer {
+  bottom: 0;
+}

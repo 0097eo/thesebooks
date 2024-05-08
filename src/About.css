@@ -1,0 +1,50 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.about {
+    
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about h1,.about h2,.about h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.about p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about ul li {
+    margin-bottom: 10px;
+}
+
+.about-contact {
+    background-color: #333;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.about-contact h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.about-contact p {
+    color: white;
+    margin-bottom: 10px;
+}
