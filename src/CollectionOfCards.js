@@ -1,58 +1,60 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
+import NewBook from './NewBook';
+import Search from './Search';
 
-const CollectionOfCards = () => {
+
+function CollectionOfCards() {
   const [books, setBooks] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [showNewBookForm, setShowNewBookForm] = useState(true);
+  const [filter, setFilter] = useState('');
+  const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     fetch('https://booksdata.onrender.com/books')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        return response.json();
-      })
-      .then(data => {
-        setBooks(data);
-        setIsLoading(false);
-      })
-      .catch(error => {
-        console.error(error);
-        setIsLoading(false);
-      });
+  .then(res => res.json())
+  .then(setBooks)
+  .finally(() => setLoading(false));
   }, []);
 
-  const handleDelete = (bookId) => {
-    fetch(`https://booksdata.onrender.com/books/${bookId}`, {
+  const deleteBook = (id) => {
+    fetch(`https://booksdata.onrender.com/books/${id}`, {
       method: 'DELETE',
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Failed to delete book');
-      }
-      setBooks(books.filter(book => book.id !== bookId));
-    })
-    .catch(error => {
-      console.error(error);
-    });
+  .then(() => {
+        setBooks(books.filter(book => book.id!== id));
+        alert('Book deleted successfully');
+      })
+  .catch(error => console.error('Error deleting book:', error));
   };
 
-  return (
-    <div>
-      {isLoading ? (
-        <p>Loading...</p>
-      ) : books.length === 0 ? (
-        <p>No books found.</p>
-      ) : (
-        <div className="card-container">
-          {books.map(book => (
-            <Card key={book.id} books={books} onDelete={() => handleDelete(book.id)}/>
-          ))}
+  const toggleNewBookForm = () => {
+    setShowNewBookForm(!showNewBookForm);
+  };
+
+
+  if (loading) return <div><h1 className='collection-loading'>Getting Your Books...</h1></div>
+ 
+ 
+  const filteredBooks = books.filter(book =>
+    book.title.toLowerCase().includes(filter.toLowerCase())
+ );
+
+ 
+    return (
+      <div className="container">
+        <Search filter={filter} setFilter={setFilter} /> 
+        <button className="random-btn" onClick={toggleNewBookForm}>{showNewBookForm? 'Add Book' : 'Collapse Form'}</button>
+        {!showNewBookForm && <NewBook books={books} setBooks={setBooks} />}
+        <div className='row'>
+
+        {filteredBooks.map(book => (
+          <Card key={book.id} book={book} deleteBook={deleteBook} id={book.id} />
+        ))}
         </div>
-      )}
-    </div>
-  );
+      </div>
+    );
 };
 
 export default CollectionOfCards;

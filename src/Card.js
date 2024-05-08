@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Card({books}){
-    return (
-        <div className = "book">
 
-            <h2>{books.title}</h2>
-            <img src={books.image} alt={books.title} />
-            <p>{books.author}</p>
-            <p>{books.description}</p>
-            <p>{books.detailedDescription}</p>
-        </div>
-    )
+const Card = ({ book, deleteBook, id }) => {
+  return (
+    <div className="card">
+        <h2>{book.title}</h2>
+        <img src={book.image} alt={book.title}></img>
+        <h3>{book.author}</h3>
+        <p>{book.description}</p>
+      <Link to={`/book/${id}`}><button>Learn More</button></Link>
+      <button onClick={() => deleteBook(id)}>Delete Book</button>
+    </div>
+  );
+};
 
-}
-
-export default Card
+export default Card;

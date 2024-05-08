@@ -1,28 +1,30 @@
 import React from 'react';
 
 
+
 const Home = () => {
   return (
     <div className="landing-page">
       <header className="header">
-        <h1>Welcome to DeezBUUKS</h1>
+        <h3>Welcome to our literary haven, a sanctuary where the world of books awaits you. </h3>
+        <h1>Featured books</h1>
       </header>
       <section className="featured-books">
-        <h2>Featured Books</h2>
+    
         <div className="book-card">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtMVTGRLESLPi6Y7uMlee6ytpCiB2DtHa46RTTHk23vw&s" alt="Book Cover" />
-          <h3>Made Familiar</h3>
-          <p>Ruto</p>
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a1/Lord_Rings_Two_Towers.jpg" alt="Book Cover" />
+          <h3>The Lord of the Rings</h3>
+          <p>J.R.R. Tolkien</p>
         </div>
         <div className="book-card">
-          <img src="https://klbbooks.com/wp-content/uploads/2020/09/Maths-F1-pb.png" alt="Book Cover" />
-          <h3>KLB</h3>
-          <p>Tiktok</p>
+          <img src="https://books.google.co.ke/books/content?id=fUoQFk8aTCkC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1QZuk83HucHFgY1TEjC_DKdW7BcQ&w=1280" alt="Book Cover" />
+          <h3>The Grapes of Wrath</h3>
+          <p>John Steinbeck</p>
         </div>
         <div className="book-card">
-          <img src="https://textbookcentre.com/media/products/394.jpg" alt="Book Cover" />
-          <h3>Get It right</h3>
-          <p>Breeder Lw</p>
+          <img src="https://books.google.co.ke/books/content?id=htkrUmjuNjoC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U3Y3sJQ4uVmocOXQ0EQxsd3eUyxpg&w=1280" alt="Book Cover" />
+          <h3>The Inferno</h3>
+          <p>Dante Alighieri</p>
         </div>
       </section>
       <footer className="contact">
