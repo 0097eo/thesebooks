@@ -49,8 +49,8 @@ Example response for a fetch request for a book with an id of 2:
 ## Installation and Project Setup
 
 ### Prerequisites
-- Node.js (version X.X.X or higher)
-- npm (version X.X.X or higher)
+- Node.js (version 16.00.0 or higher)
+- npm (version 8.0.0 or higher)
 
 ### Instructions
 To get started with The Book App Web Application, follow these steps:
