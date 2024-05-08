@@ -9,6 +9,8 @@ function NewBook({ books, setBooks }) {
   const [description, setDescription] = useState('');
   const [detailedDescription, setDetailedDescription] = useState('');
   const [id, setId] = useState('');
+  const [isbn, setIsbn] = useState('');
+  const [pageCount, setPageCount] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,7 +20,7 @@ function NewBook({ books, setBooks }) {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({id, title, author, image, description, detailedDescription }),
+        body: JSON.stringify({id, title, author, image, description, detailedDescription, isbn, pageCount }),
       });
       if (response.ok) {
         alert('Book added successfully');
@@ -28,7 +30,9 @@ function NewBook({ books, setBooks }) {
         setDescription('');
         setDetailedDescription('');
         setId('');
-        setBooks([...books, {id, title, author, image, description, detailedDescription }]);
+        setIsbn('');
+        setPageCount('');
+        setBooks([...books, {id, title, author, image, description, detailedDescription, isbn, pageCount}]);
       }
     } catch (error) {
       console.error('Error adding book:', error);
@@ -42,6 +46,12 @@ function NewBook({ books, setBooks }) {
 
       <label htmlFor="title">Title:</label>
       <input type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Title" required />
+
+      <label htmlFor="title">ISBN:</label>
+      <input type="text" id="isbn" value={isbn} onChange={(e) => setIsbn(e.target.value)} placeholder="ISBN" required />
+
+      <label htmlFor="title">Page Count:</label>
+      <input type="text" id="pageCount" value={pageCount} onChange={(e) => setPageCount(e.target.value)} placeholder="Page Count" required />
 
       <label htmlFor="author">Author:</label>
       <input type="text" id="author" value={author} onChange={(e) => setAuthor(e.target.value)} placeholder="Author" required />
