@@ -17,7 +17,6 @@ const Login = () => {
                 console.log(authCredentials)
                 navigate('/books')
             })
-           .catch((error) => console.log(error))
            .catch((error) => {
             console.log(error)
             alert("Wrong credentials. Please try again")

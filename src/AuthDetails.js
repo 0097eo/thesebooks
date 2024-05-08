@@ -1,9 +1,8 @@
-// src/AuthDetails.js
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AuthDetails.css'; // Import the CSS file
-import { onAuthStateChanged, signOut } from 'firebase/auth'; // Import signOut here
-import { auth } from './firebase'; // Import auth from your firebase file
+import './AuthDetails.css'; 
+import { onAuthStateChanged, signOut } from 'firebase/auth'; 
+import { auth } from './firebase'; 
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
