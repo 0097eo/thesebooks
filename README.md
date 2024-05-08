@@ -1,26 +1,31 @@
-# The Book App Web Application
+# DeezBUUKS
 
 #### Date, 2024/05/08
 
 #### By *Group 11*
 
 ## Description
+DeezBUUKS is designed to bring the vast world of books into the hands of readers everywhere. Our platform allows users to browse, search, and read a wide variety of books from different genres. With features like reviewing our application ensures a comfortable and personalized reading experience for book lovers of all ages.
 
-#### Introduction
-The Book App Web Application is designed to bring the vast world of books into the hands of readers everywhere. Our platform allows users to browse, search, and read a wide variety of books from different genres. With features like bookmarking, custom reading lists, and adjustable reading settings, our application ensures a comfortable and personalized reading experience for book lovers of all ages.
+## Demo
+![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/e9b90242-2ba5-48cb-8fb2-af0269f69b09)
+
+![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/4fd7dfba-f6f6-4338-974f-4adbf0b08d08)
+
+![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/86541993-1c9b-4f6a-b1cb-f3941c1a1b6c)
+
 
 ## Detailed Description
 
-The project directory, named `The-Book-App-Web-Application`, includes several files and folders essential for the application's functionality:
-1. `assets` (This folder contains images and icons used throughout the project, along with a `style.css` file for the application's visual design.)
+The project directory, named `DeezBUUKS`, includes several files and folders essential for the application's functionality:
+1. `assets` (This folder contains images and icons used throughout the project, along with  `css` files for the application's visual design.)
 2. `src` (This folder houses the JavaScript files responsible for fetching book data from our database, handling user interactions, and dynamically updating the user interface.)
 
 Other important files in the project, aside from this README.md, are:
 ```
-1. A `db.json` file (This contains a simulated database of books, sourced from a public API.)
-2. An `index.html` file (This serves as the entry point for the application, rendering the user interface in the web browser.)
+1. An `index.html` file (This serves as the entry point for the application, rendering the user interface in the web browser.)
 ```
-Users can interact with the application in several ways, such as searching for books by title or author, creating custom reading lists, and adjusting the text size and background color for an optimal reading experience.
+DeezBUUKS is a treasure trove for book lovers, offering a vast library spanning all genres and formats. Users can effortlessly search for their next great read by title, making it easy to discover new favorites. The app allows for seamless management the collection, enabling users to add and delete books as they see fit. A unique feature is the ability to rate books, sharing insightful reviews and experiences with the community. Additionally, the app facilitates access to external links for reading, enhancing the convenience and accessibility of literature. 
 
 ## Response Format
 When a user performs a search or interacts with the database, the fetch might look like this:
@@ -34,16 +39,19 @@ fetch("http://localhost:3000/books",{
 ```
 Example response for a fetch request for a book with an id of 2:
 ```json
-   {
-     "id": 2,
-     "title": "Pride and Prejudice",
-     "author": "Jane Austen",
-     "cover_image_url": "https://example.com/pride_and_prejudice.jpg",
-     "description": "A romantic novel of manners that depicts the emotional development of its protagonist, Elizabeth Bennet, who learns the error of making hasty judgments and comes to appreciate the difference between superficial goodness and actual goodness.",
-     "genre": "Classic Literature",
-     "published_date": "1813",
-     "rating": "4.5"
-   }
+{
+  "id": 2,
+  "isbn": "978-1-60309-517-4",
+  "link": "https://www.google.co.ke/books/edition/1984_Indonesian_Edition/JT_JDAAAQBAJ?hl=en&gbpv=0",
+  "pageCount": "408",
+  "title": "1984",
+  "author": "George Orwell",
+  "image": "https://books.google.co.ke/books/publisher/content?id=JT_JDAAAQBAJ&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U2MsxEnlYvYoweHkHNtYR5CpLNAOA&w=1280",
+  "description": "A dystopian novel that explores themes of totalitarianism, propaganda, and individualism.",
+  "detailedDescription": "In a totalitarian future society, Winston Smith works for the Party, rewriting history to fit its propaganda. As he begins to rebel against the oppressive regime, he 
+    falls in love with Julia, leading to their eventual capture and torture. Orwell's dystopian masterpiece warns of the dangers of totalitarianism, surveillance, and the manipulation of truth",
+  "rating": "4"
+},
    ```
 
 ## Installation and Project Setup
@@ -53,7 +61,7 @@ Example response for a fetch request for a book with an id of 2:
 - npm (version 8.0.0 or higher)
 
 ### Instructions
-To get started with The Book App Web Application, follow these steps:
+To get started with DeezBUUKS, follow these steps:
 
 Get the project files by cloning the repository:
 ```
@@ -63,24 +71,20 @@ In the terminal, navigate to the project directory and install the necessary dep
 ```
 npm install
 ```
-
 ### Setup
-
-To launch the application's backend, run the following command:
-```console
-$ json-server --watch db.json
-```
 You can test the server by visiting this URL in your browser:
-[http://localhost:3000/books](http://localhost:3000/books)
-
+```
+https://booksdata.onrender.com/books
+```
 To start using the application,run the following command:
 ```console
 $ npm start
 ```
 
 The base URL for the API will be:
-[http://localhost:3000](http://localhost:3000).
-
+```
+https://booksdata.onrender.com/books
+```
 
 ## Contributing
 Contributions are welcome! If you find any issues or want to enhance the application, please follow these steps:
@@ -91,8 +95,11 @@ Contributions are welcome! If you find any issues or want to enhance the applica
 4. Push your changes to your forked repository.
 5. Submit a pull request detailing your changes.
 
-## Usage
-Users can interact with the application in several ways, such as searching for books by title or author, creating custom reading lists, and adjusting the text size and background color for an optimal reading experience.
+## Key Features
+* Explore Books: Dive into a vast library of books across all genres and formats. Use the search functionality to find your next great read by title.
+* Manage the Collection: Add books to the collection. Easily delete books from the collection to maintain an organized library.
+* Rate and Review: Share your thoughts and experiences by rating books and writing reviews. Your insights can help others discover great reads.
+* Read Online: Access external links to read books directly within the app, enhancing your reading experience.
 
 
 ## Licenses
@@ -110,7 +117,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 We would like to acknowledge the Google Books API for additional book data, reflecting the application's commitment to providing a rich selection of books. Their API has been a crucial component in extending the functionality and richness of our application. More details are available at:
 ```
-https://booksdata.onrender.com/books
+https://developers.google.com/books/docs/v1/using
 ```
 
 ## Technologies Used
@@ -118,6 +125,7 @@ https://booksdata.onrender.com/books
 - HTML
 - JavaScript
 - CSS
+- Firebase
 
 
 ## Support and Contact Details
