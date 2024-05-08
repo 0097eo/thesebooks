@@ -5,6 +5,7 @@ import './BookDetails.css';
 const BookDetails = () => {
   const [book, setBook] = useState(null);
   const [rating, setRating] = useState('');
+  const [review, setReview] = useState(''); 
   const [showForm, setShowForm] = useState(false); 
   const [buttonText, setButtonText] = useState('Rate this book'); 
   const { id } = useParams();
@@ -32,17 +33,17 @@ const BookDetails = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ rating }),
+        body: JSON.stringify({ rating, review }), 
       });
 
       if (!response.ok) {
         throw new Error('Failed to rate the book');
       }
 
-      alert('Rating submitted successfully');
-      setShowForm(false); // Hide the form after successful submission
+      alert('Rating and review submitted successfully');
+      setShowForm(false); 
     } catch (error) {
-      console.error('Error submitting rating:', error);
+      console.error('Error submitting rating and review:', error);
     }
   };
 
@@ -71,6 +72,7 @@ const BookDetails = () => {
         <p><strong>Synopsis:</strong> {book.detailedDescription}</p>
         <p><strong>Pages:</strong> {book.pageCount}</p>
         <p><strong>Rating:</strong> {book.rating}/5</p>
+        <p><strong>Review:</strong> {book.review}</p>
         <button onClick={toggleFormVisibility} className='book-rating-btn'>{buttonText}</button>
         {showForm && (
           <form onSubmit={handleSubmit}>
@@ -83,7 +85,14 @@ const BookDetails = () => {
               min="1"
               max="5"
             />
-            <button type="submit">Submit Rating</button>
+            <label htmlFor="review">Your Review:</label>
+            <textarea
+              id="review"
+              value={review}
+              onChange={(e) => setReview(e.target.value)}
+              placeholder="Write your review here..."
+            ></textarea>
+            <button type="submit">Submit Rating and Review</button>
           </form>
         )}
       </div>
