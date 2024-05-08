@@ -16,3 +16,6 @@ const Search = ({ filter, setFilter }) => {
 };
 
 export default Search;
+
+
+
