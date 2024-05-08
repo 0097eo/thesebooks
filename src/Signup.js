@@ -16,7 +16,10 @@ const SignUp = () => {
                 alert('Successfully created account')
                 navigate('/login')
             })
-           .catch((error) => console.log(error))
+           .catch((error) => {
+            console.log(error)
+            alert("Password should be at least 6 characters")
+          })
     }
   return (
     <div className='sign-in-container'>
