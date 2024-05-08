@@ -7,6 +7,7 @@ import BookDetails from "./BooksDetails";
 import NavBar from "./NavBar";
 import Login from "./Login";
 import SignUp from "./Signup";
+import About from "./About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/books" element={<CollectionOfCards />} />
