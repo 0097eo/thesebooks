@@ -19,15 +19,21 @@ const BookDetails = () => {
     fetchBookDetails();
   }, [id]);
 
-  if (!book) return <div>Loading...</div>;
+   if (!book) return <div><h1 className='details-loading'>Getting Details...</h1></div>;
 
   return (
-    <div>
-      <h1>Title: {book.title}</h1>
-      <img src={book.image} alt={book.title} />
-      <h3>Author: {book.author}</h3>
-      <p>Description: {book.description}</p>
-      <p>Synopsis: {book.detailedDescription}</p>
+      <div className="book-details-container">
+        <div className="image-container">
+          <img src={book.image} alt={book.title} />
+        </div>
+      <div className="details-container">
+        <h1>Title: {book.title}</h1>
+        <p><strong>ISBN: </strong>{book.isbn}</p>
+        <h3>Author: {book.author}</h3>
+        <p><strong>Description:</strong> {book.description}</p>
+        <p><strong>Synopsis:</strong> {book.detailedDescription}</p>
+        <p><strong>Pages:</strong > {book.pageCount}</p>
+      </div>
     </div>
   );
 };
