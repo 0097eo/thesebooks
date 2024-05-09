@@ -10,6 +10,7 @@
 * Sedly Keith
 * Patrick Maina
 * Treyjey Oghera
+* Bill Kimtai
 
 ## Description
 DeezBUUKS is designed to bring the vast world of books into the hands of readers everywhere. Our platform allows users to browse, search, and read a wide variety of books from different genres. With features like reviewing our application ensures a comfortable and personalized reading experience for book lovers of all ages.
