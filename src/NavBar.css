@@ -6,6 +6,19 @@
     background-color: #333;
     color: white;
   }
+  .landing-page{
+    background-color: aquamarine;
+  }
+
+  .about{
+    background-color: aquamarine;
+  }
+  .book-details-container{
+    background-color: aquamarine;
+  }
+  .container{
+    background-color: aquamarine;
+  }
   
   .navbar h1 {
     font-size: 24px;

@@ -1,9 +1,11 @@
 import React from 'react';
 import './About.css'
+import AuthDetails from './AuthDetails';
 
 const About = () => {
   return (
     <div className='about'>
+        <AuthDetails/>
         <h1>About DeezBUUKS</h1>
         <h2>Who Are We</h2>
         <p>DeezBUUKS is a cutting-edge online platform for book enthusiasts, offering a unique blend of exploration, discovery, and community engagement. We're a team of avid readers and writers who are passionate about sharing the joy of reading and fostering a vibrant community around books.</p>
