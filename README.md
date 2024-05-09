@@ -1,13 +1,25 @@
 # DeezBUUKS
 
-#### Date, 2024/05/08
+## Date
+   2024/05/08
 
-#### By *Group 11*
+## Authors
+*Group 11*
+* Emmanuel Otieno
+* Matthew Mwachi
+* Sedly Keith
+* Patrick Maina
+* Treyjey Oghera
 
 ## Description
 DeezBUUKS is designed to bring the vast world of books into the hands of readers everywhere. Our platform allows users to browse, search, and read a wide variety of books from different genres. With features like reviewing our application ensures a comfortable and personalized reading experience for book lovers of all ages.
 
 ## Demo
+#### Live Link
+https://thesebooks.vercel.app/
+
+#### Screenshots
+
 ![image](https://github.com/OkeloOtieno/thesebooks/assets/41443081/032b24fd-eaf2-4ed8-a45a-bab25cd7c967)
 
 ![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/e9b90242-2ba5-48cb-8fb2-af0269f69b09)
