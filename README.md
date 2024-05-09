@@ -8,11 +8,13 @@
 DeezBUUKS is designed to bring the vast world of books into the hands of readers everywhere. Our platform allows users to browse, search, and read a wide variety of books from different genres. With features like reviewing our application ensures a comfortable and personalized reading experience for book lovers of all ages.
 
 ## Demo
+![image](https://github.com/OkeloOtieno/thesebooks/assets/41443081/032b24fd-eaf2-4ed8-a45a-bab25cd7c967)
+
 ![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/e9b90242-2ba5-48cb-8fb2-af0269f69b09)
 
-![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/4fd7dfba-f6f6-4338-974f-4adbf0b08d08)
+![image](https://github.com/OkeloOtieno/thesebooks/assets/41443081/e90c47eb-fec5-4d72-9da8-64232839c477)
 
-![image](https://github.com/OkeloOtieno/BottomlessCocktails/assets/41443081/86541993-1c9b-4f6a-b1cb-f3941c1a1b6c)
+![image](https://github.com/OkeloOtieno/thesebooks/assets/41443081/8c07dbb7-b965-448e-9996-e162f69816ba)
 
 
 ## Detailed Description
